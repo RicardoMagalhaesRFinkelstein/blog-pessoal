@@ -28,6 +28,6 @@ export class PostagemService {
   }
 
   getByIdUser(id:number): Observable<User>{
-    return this.http.get<User>(`http://localhost:8080/usuarios/${id}`)
+    return this.http.get<User>(`http://localhost:8080/usuarios/${id}`, this.token)
   }
 }
